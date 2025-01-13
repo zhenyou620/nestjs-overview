@@ -6,7 +6,7 @@ import { CreateCatDto } from 'src/cats/dto/create-cat.dto';
 export class PetsController {
   constructor(private catsService: CatsService) {}
 
-  @Post()
+  @Post('/cats')
   async create(@Body() createCatDto: CreateCatDto) {
     this.catsService.create(createCatDto);
   }
